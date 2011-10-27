@@ -23,44 +23,71 @@
         <script src="#" type="text/javascript"></script>
     </head>
     <body>
-        <h1>Log a score by completing the information below</h1>
-        <fieldset>
-            <legend>Testing Information</legend>
+        <!--Header section to seperate title-->
+        <header>
+            <h1>Complete the following fields to record</h1>
+        </header>
+        <!-- division to store all form data on page-->
+        <div>
+            <form action="#" method="post">
+                <fieldset>
+                    <!--Testing information section-->
+                    <legend>Blood Glucose Information</legend>
+                    </br>
+                    <!--section to seperate the date entry-->
+                    <div>
+                        <label for="testDate">Date</label></br><input type="date" id="testDate" /></li>
+                    </div>
+                    </br>
+                    <!--section to seperate the time of test selection box-->
+                    <div>
+                        <label for="timeoftest">Time</label>
+                        <select id="timeoftest">
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                            <option value="evening">Evening</option>
+                        </select>
+                    </div>
+                    </br>
+                    <!--seperate container for score section slider-->
+                    <div>
+                        <label for="points">Score</label></br>
+                        <input type="range" name="points" min="80" max="240" />
+                    </div>
+                </fieldset>
+                <!-- second fields set to seperate information on form-->
+                <fieldset>
+                    <!--legen name-->
+                    <legend>Insulin Information</legend>
+                    </br>
+                    <!-- container to hold the checkbox for insulin types-->
+                    <div>
+                        <input type="checkbox" checked value="Humalog" id="humalog" /><label for="humalog">Humalog</label></li>
+                        <input type="checkbox" id="lantus" /><label for="lantus">Lantus</label></li>
+                        <input type="checkbox" id="Novalog" /><label for="novalog">Novalog</label></li>
+                    </div>
+                    </br>
+                    <!-- container to hold the numeric units taken field-->
+                    <div>
+                        <label for="insunits">Units</label></br><input type="number" id="insunits" min="0" />
+                    </div>
+                    </br>
+                    <!-- conatiner to hold the addl info text entry-->
+                    <div>
+                        <label for="addlinfo">Additional Info</label></br><textarea id="addlinfo"></textarea>
+                        <input type="hidden" value="true" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <!-- footer to hold the submit button and links-->
+        <footer>
+            <!-- submit button-->
+            <input type="submit" value="Submit">
             </br>
-            <div>
-                <label for="testDate">Date</label></br><input type="date" id="testDate" /></li>
-            </div>
-            </br>
-            <div>
-                <label for="timeoftest">Time</label>
-                <select id="timeoftest">
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                </select>
-            </div>
-            </br>
-            <div>
-                <label for="points">Score</label></br>
-                <input type="range" name="points" min="80" max="240" />
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Insulin Information</legend>
-            </br>
-            <div>
-                <input type="checkbox" checked value="Humalog" id="humalog" /><label for="humalog">Humalog</label></li>
-                <input type="checkbox" id="lantus" /><label for="lantus">Lantus</label></li>
-                <input type="checkbox" id="Novalog" /><label for="novalog">Novalog</label></li>
-            </div>
-            </br>
-            <div>
-                <label for="insunits">Units</label></br><input type="number" id="insunits" min="0" />
-            </div>
-            </br>
-            <div>
-                <label for="addlinfo">Additional Info</label></br><input type="text" maxlength="240"  id="addlinfo" />
-            </div>
-        </fieldset>      
+            <!--Links to clear and display form data-->
+            <a href="#">Cleared Stored Data</a>
+            <a href="#">Display Data</a>
+        </footer>
     </body>
 </html>
