@@ -22,12 +22,27 @@
         <!-- calling JavaScript "eventually"-->
         <script src="#" type="text/javascript"></script>
     </head>
+    <body>
+        <h1>Log a score by completing the information below</h1>
+        <fieldset>
+            <legend>Testing Information</legend>
+            <div>
+                <label for="testDate">Date</label></br><input type="date" id="testDate" /></li>
+            </div>
+            </br>
+            <div>
+                <label for="timeoftest">Time</label>
+                <select id="timeoftest">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+            </div>
+            </br>
+            <div>
+                <label for="points">Score</label></br>
+                <input type="range" name="points" min="80" max="240" />
 
-
-
-
-
-
-
-
+        </fieldset>
+    </body>
 </html>
