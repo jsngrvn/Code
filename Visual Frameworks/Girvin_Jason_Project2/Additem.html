@@ -33,7 +33,7 @@
         </header>
         <!-- division to store all form data on page-->
         <div>
-            <form action="#" method="post">
+            <form action="#" method="post" id=formData>
                 <fieldset>
                     <!--Testing information section-->
                     <legend>Blood Glucose Information</legend>
@@ -43,12 +43,10 @@
                         <label for="testDate">Date</label>
                         <input type="date" id="testDate" /></li>
                     </div>
-                    
                     <!--section to seperate the time of test selection box-->
                     <ul>
-                        <li id = "timeofTest"><label for="timeoftest">Time</label>
+                        <li id ="select"><label for="group">Time</label>
                     </ul>
-                   
                     <!--seperate container for score section slider-->
                     <div>
                         <label for="points">Score</label>
@@ -92,6 +90,5 @@
         </footer>
         <!-- calling JavaScript "eventually"-->
         <script src="main.js" type="text/javascript"></script>
-    </body>
-     
+    </body>  
 </html>
