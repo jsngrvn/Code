@@ -27,25 +27,56 @@ window.addEventListener("DOMContentLoaded", function(){
             makeOption.setAttribute("value", optText);
             makeOption.innerHTML = optText;
             makeSelect.appendChild(makeOption);
-        }
+            }
         selectLi.appendChild(makeSelect);
-    };
+        };
+    
+    //find value of selected radio button
+    function getSelectedRadio(){
+        var radio = document.forms[0].insulin;
+        for (var i=0; i<radio.length; i++){
+            if(radios[i].checked){
+                inslulinValue = radios[i].value;    
+                }
+            }
+        };
+
+
+    function storeData(){
+        var id = Math.floor(Math.random()*1000001);
+        //retrieve form field values and store locally in an object
+        //objects properties contain an array which includes form label and inputs
+        getSelectedRadio();
+        var item = {};
+            item.testDate = ["Test Date:", $('testDate').value];
+            item.select   = ["Time of Test:", $('select').value];
+            item.points   = ["Score:", $('points').value];   
+            item.checkbox = ["Insulin Taken:", insulinValue];
+            item.insunits = ["Units Taken:", $('insunits').value];
+            item.addlinfo = ["Additional Info:", $('addlinfo').value];
+        //save data to local storage: Use stringify to convert objects to string
+        localStorage.setItem(id, JSON.stringify(item));
+        alert("Saved testing event!");
+        
+        
+        };
 
     
     //variable defaults
-    var timeofTest = ["--Time of Test--", "Morning", "Afternoon", "Evening"];
+    var timeofTest = ["--Time of Test--", "Morning", "Afternoon", "Evening"],
+        inslulinValue;
     makeCats();
     
-/*    
-    //set link & click events (setting up buttons)
+   
+/*    //set link & click events (setting up buttons)
     var displayData = $("displayData");
     displayData.addEventListener("click", getData);
 
     var clearData = $("clear");
     clearData.addEventListener("click", clearLocal);
-
-    var save = $("submit");
-    save.addEventListener("click", storedata);
-    
 */
+    var save = $('submit');
+    save.addEventListener("click", storeData);
+    
+
 });
