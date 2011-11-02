@@ -24,8 +24,7 @@
         
         <!-- calling css "eventually"-->
         <link href="styles.css" rel="stylesheet" type="text/css" />
-        <!-- calling JavaScript "eventually"-->
-        <script src="main.js" type="text/javascript"></script>
+        
     </head>
     <body>
         <!--Header section to seperate title-->
@@ -41,18 +40,14 @@
                     
                     <!--section to seperate the date entry-->
                     <div>
-                        <label for="testDate">Date</label><input type="date" id="testDate" /></li>
+                        <label for="testDate">Date</label>
+                        <input type="date" id="testDate" /></li>
                     </div>
                     
                     <!--section to seperate the time of test selection box-->
-                    <div>
-                        <label for="timeoftest">Time</label>
-                        <select id="timeoftest">
-                            <option value="morning">Morning</option>
-                            <option value="afternoon">Afternoon</option>
-                            <option value="evening">Evening</option>
-                        </select>
-                    </div>
+                    <ul>
+                        <li id = "timeofTest"><label for="timeoftest">Time</label>
+                    </ul>
                    
                     <!--seperate container for score section slider-->
                     <div>
@@ -67,9 +62,9 @@
               
                     <!-- container to hold the checkbox for insulin types-->
                     <div>
-                        <input type="checkbox" checked value="Humalog" id="humalog" /><label for="humalog">Humalog</label></li>
-                        <input type="checkbox" id="lantus" /><label for="lantus">Lantus</label></li>
-                        <input type="checkbox" id="novalog" /><label for="novalog">Novalog</label></li>
+                        <label for="humalog">Humalog</label></li><input type="checkbox" checked value="Humalog" id="humalog" />
+                        <label for="lantus">Lantus</label></li><input type="checkbox" id="lantus" />
+                        <label for="novalog">Novalog</label></li><input type="checkbox" id="novalog" />
                     </div>
                     
                     <!-- container to hold the numeric units taken field-->
@@ -88,11 +83,15 @@
         <!-- footer to hold the submit button and links-->
         <footer>
             <!-- submit button-->
-            <input type="submit" value="Submit">
-            
+            <div>
+                <input type="submit" value="Submit" class="button" id="submit">
+            </div>
             <!--Links to clear and display form data-->
-            <a href="#">Cleared Stored Data</a>
-            <a href="#">Display Data</a>
+            <a href="#" id="clearData">Cleared Stored Data</a>
+            <a href="#" id="displayData">Display Data</a>
         </footer>
+        <!-- calling JavaScript "eventually"-->
+        <script src="main.js" type="text/javascript"></script>
     </body>
+     
 </html>

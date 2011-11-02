@@ -1,0 +1,62 @@
+
+h1{
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    border-bottom: solid;
+}
+
+h2{
+    padding: 10px;
+}
+
+
+body{
+    border: solid;
+    font-family: sans-serif;
+}
+
+
+p{
+    padding: 10px;
+}
+
+
+fieldset{
+    border: none;
+    margin: 5px;
+    
+}
+
+
+div{
+
+    padding: inherit;
+}
+
+
+label{
+    display: block;    
+}
+
+
+
+legend{
+    font-size: 20px;
+    border-bottom-style: groove;
+}
+
+a{
+    margin: 10px;
+
+}
+
+.button{
+
+    
+}
+
+
+
+
