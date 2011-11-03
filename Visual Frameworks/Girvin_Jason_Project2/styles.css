@@ -1,7 +1,8 @@
 
 h1{
-    background-color: grey;
+    background-color: #25547b;
     text-align: center;
+    color: white;
     padding: 10px;
     margin: auto;
     border-bottom: solid;
@@ -15,6 +16,7 @@ h2{
 body{
     border: solid;
     font-family: sans-serif;
+    
 }
 
 
@@ -31,7 +33,7 @@ fieldset{
 
 
 div{
-
+    
     padding: inherit;
 }
 
@@ -45,21 +47,25 @@ label{
 legend{
     font-size: 20px;
     border-bottom-style: groove;
+    color: #25547b;
 }
 
 a{
+    display: inline-block;
     margin: 10px;
-
+    color: blue;
 }
 
 .button{
-
+    
 }
 
 ul{
+    
     list-style-type: none;
     padding: inherit;
 }
+
 
 
 

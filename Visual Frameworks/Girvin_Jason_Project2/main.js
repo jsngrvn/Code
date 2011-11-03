@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var radios = document.forms[0].insulin;
         for (var i=0; i<radios.length; i++){
             if(radios[i].checked){
-                inslulinValue = radios[i].value;
+                return (radios[i].value);
                 }
             }
         };
@@ -48,6 +48,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 $('clearData').style.display = "inline";
                 $('displayData').style.display = "none";
                 $('addNew').style.display = "inline";
+                $('submit').style.display = "none";
                 break;
             case "off":
                 $('formData').style.display = "block";
@@ -55,6 +56,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 $('displayData').style.display = "inline";
                 $('addNew').style.display = "none";
                 $('items').style.display = "none";
+                $('submit').style.display = "none";
                 break;
             default:
                 return false;
@@ -66,12 +68,12 @@ window.addEventListener("DOMContentLoaded", function(){
         var id = Math.floor(Math.random()*1000001);
         //retrieve form field values and store locally in an object
         //objects properties contain an array which includes form label and inputs
-        getSelectedRadio();
+        //getSelectedRadio();
         var item = {};
             item.testDate = ["Test Date:", $('testDate').value];
             item.select   = ["Time of Test:", $('groups').value];
             item.tscore   = ["Score:", $('tscore').value];   
-            item.radios   = ["Insulin Taken:", insulinValue];
+            item.radios   = ["Insulin Taken:", getSelectedRadio()];
             item.insunits = ["Units Taken:", $('insunits').value];
             item.addlinfo = ["Additional Info:", $('addlinfo').value];
         //save data to local storage: Use stringify to convert objects to string
