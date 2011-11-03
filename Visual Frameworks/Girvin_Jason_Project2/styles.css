@@ -33,7 +33,6 @@ fieldset{
 
 
 div{
-    
     padding: inherit;
 }
 
@@ -54,10 +53,11 @@ a{
     display: inline-block;
     margin: 10px;
     color: blue;
+
 }
 
 .button{
-    
+    margin-left:30px;
 }
 
 ul{
