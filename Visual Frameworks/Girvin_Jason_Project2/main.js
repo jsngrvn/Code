@@ -50,8 +50,8 @@ window.addEventListener("DOMContentLoaded", function(){
         var item = {};
             item.testDate = ["Test Date:", $('testDate').value];
             item.select   = ["Time of Test:", $('select').value];
-            item.score    = ["Score:", $('score').value];   
-            item.checkbox = ["Insulin Taken:", insulinValue];
+            item.tscore   = ["Score:", $('tscore').value];   
+            item.radios   = ["Insulin Taken:", insulinValue];
             item.insunits = ["Units Taken:", $('insunits').value];
             item.addlinfo = ["Additional Info:", $('addlinfo').value];
         //save data to local storage: Use stringify to convert objects to string
@@ -87,6 +87,18 @@ window.addEventListener("DOMContentLoaded", function(){
         
         };
     
+    function clearLocal(){
+        if(localStorage.length === 0){
+            alert("There is no data to clear.");
+        }else{
+            localStorage.clear();
+            alert("All test scores have been deleted.");
+            window.location.reload();
+            return false;
+        }
+        
+    }
+    
     
     //variable defaults
     var    timeofTest = ["--Time of Test--", "Morning", "Afternoon", "Evening"];
@@ -95,12 +107,12 @@ window.addEventListener("DOMContentLoaded", function(){
     
    
     //set link & click events (setting up buttons)
-    var displayData = $("displayData");
+    var displayData = $('displayData');
     displayData.addEventListener("click", getData);
-/*
-    var clearData = $("clear");
+
+    var clearLink = $('clear');
     clearData.addEventListener("click", clearLocal);
-*/
+
     var save = $('submit');
     save.addEventListener("click", storeData);
     
