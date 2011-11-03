@@ -40,6 +40,26 @@ window.addEventListener("DOMContentLoaded", function(){
                 }
             }
         };
+        
+    function toggleControls(n){
+        switch(n){
+            case "on":
+                $('formData').style.display = "none";
+                $('clearData').style.display = "inline";
+                $('displayData').style.display = "none";
+                $('addNew').style.display = "inline";
+                break;
+            case "off":
+                $('formData').style.display = "block";
+                $('clearData').style.display = "inline";
+                $('displayData').style.display = "inline";
+                $('addNew').style.display = "none";
+                $('items').style.display = "none";
+                break;
+            default:
+                return false;
+        }
+    }
 
 
     function storeData(){
@@ -49,7 +69,7 @@ window.addEventListener("DOMContentLoaded", function(){
         getSelectedRadio();
         var item = {};
             item.testDate = ["Test Date:", $('testDate').value];
-            item.select   = ["Time of Test:", $('select').value];
+            item.select   = ["Time of Test:", $('groups').value];
             item.tscore   = ["Score:", $('tscore').value];   
             item.radios   = ["Insulin Taken:", insulinValue];
             item.insunits = ["Units Taken:", $('insunits').value];
@@ -62,12 +82,17 @@ window.addEventListener("DOMContentLoaded", function(){
         };
 
     function getData(){
+        toggleControls("on");
+        if (localStorage.length === 0){
+            alert("There is no data to display.");
+        }
         //write data from local to screen
         var makeDiv = document.createElement('div');
         makeDiv.setAttribute("id", "items");
         var makeList = document.createElement('ul');
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
+        $('items').style.display = "block";
         for (var i=0, len=localStorage.length; i<len; i++){
             var makeli = document.createElement('li');
             makeList.appendChild(makeli);
@@ -97,7 +122,7 @@ window.addEventListener("DOMContentLoaded", function(){
             return false;
         }
         
-    }
+    };
     
     
     //variable defaults
@@ -110,7 +135,7 @@ window.addEventListener("DOMContentLoaded", function(){
     var displayData = $('displayData');
     displayData.addEventListener("click", getData);
 
-    var clearLink = $('clear');
+    var clearLink = $('clearData');
     clearData.addEventListener("click", clearLocal);
 
     var save = $('submit');
