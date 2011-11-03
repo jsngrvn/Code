@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var item = {};
             item.testDate = ["Test Date:", $('testDate').value];
             item.select   = ["Time of Test:", $('select').value];
-            //item.score    = ["Score:", $('score').value];   
+            item.score    = ["Score:", $('score').value];   
             item.checkbox = ["Insulin Taken:", insulinValue];
             item.insunits = ["Units Taken:", $('insunits').value];
             item.addlinfo = ["Additional Info:", $('addlinfo').value];
