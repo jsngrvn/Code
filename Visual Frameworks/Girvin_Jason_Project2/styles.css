@@ -12,36 +12,29 @@ h2{
     padding: 10px;
 }
 
-
 body{
     border: solid;
     font-family: sans-serif;
-    
+    outline: groove;
+    outline-color: grey;
 }
-
 
 p{
     padding: 10px;
 }
 
-
 fieldset{
     border: none;
-    margin: 5px;
-    
+    margin: 5px;    
 }
-
 
 div{
     padding: inherit;
 }
 
-
 label{
     display: block;    
 }
-
-
 
 legend{
     font-size: 20px;
@@ -53,20 +46,30 @@ a{
     display: inline-block;
     margin: 10px;
     color: blue;
-
 }
 
 .button{
     margin-left:30px;
 }
 
-ul{
-    
+ul{    
     list-style-type: none;
     padding: inherit;
 }
 
+a:link {
+    text-decoration: none;
+}
 
+a:visited {
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
 
+a:active {
+    text-decoration: underline;
+}
 
