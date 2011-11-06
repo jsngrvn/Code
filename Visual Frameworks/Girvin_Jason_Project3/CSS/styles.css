@@ -1,0 +1,75 @@
+
+h1{
+    background-color: #25547b;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: auto;
+    border-bottom: solid;
+}
+
+h2{
+    padding: 10px;
+}
+
+body{
+    border: solid;
+    font-family: sans-serif;
+    outline: groove;
+    outline-color: grey;
+}
+
+p{
+    padding: 10px;
+}
+
+fieldset{
+    border: none;
+    margin: 5px;    
+}
+
+div{
+    padding: inherit;
+}
+
+label{
+    display: block;    
+}
+
+legend{
+    font-size: 20px;
+    border-bottom-style: groove;
+    color: #25547b;
+}
+
+a{
+    display: inline-block;
+    margin: 10px;
+    color: blue;
+}
+
+.button{
+    margin-left:30px;
+}
+
+ul{    
+    list-style-type: none;
+    padding: inherit;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
