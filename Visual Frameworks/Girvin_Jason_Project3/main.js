@@ -97,7 +97,7 @@ window.addEventListener("DOMContentLoaded", function(){
         $('items').style.display = "block";
         for (var i=0, len=localStorage.length; i<len; i++){
             var makeli = document.createElement('li');
-	    var linksLi = documents.createElement('li');
+	    //var linksLi = documents.createElement('li');
             makeList.appendChild(makeli);
             var key = localStorage.key(i);
             var value = localStorage.getItem(key);
