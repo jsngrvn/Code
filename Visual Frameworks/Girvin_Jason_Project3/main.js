@@ -97,6 +97,7 @@ window.addEventListener("DOMContentLoaded", function(){
         $('items').style.display = "block";
         for (var i=0, len=localStorage.length; i<len; i++){
             var makeli = document.createElement('li');
+	    var linksLi = documents.createElement('li');
             makeList.appendChild(makeli);
             var key = localStorage.key(i);
             var value = localStorage.getItem(key);
@@ -109,7 +110,9 @@ window.addEventListener("DOMContentLoaded", function(){
                 makeSubList.appendChild(makeSubLi);
                 var optSubText = obj[n][0]+" "+obj[n][1];
                 makeSubLi.innerHTML = optSubText;
+		makeSubList.appendChild(linksLi);
                 }
+	    //makeItemLinks(); //create edit/delete links for each item in LocalStorage
             }
         
         };
