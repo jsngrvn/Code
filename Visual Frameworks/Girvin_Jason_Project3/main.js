@@ -194,15 +194,49 @@ window.addEventListener("DOMContentLoaded", function(){
         
     };
     
-    function validate(){
-    	
+    function validate(e){
+    	//define elements I want to validate
+	var getSelect = $('groups');
+	var getInsunits = $('insunits');
 	
+	//reset error messages
+	errMsg.innerHTML = "";
+	getSelect.style.border = "1px solid grey";
+	getInsunits.style.border = "1px solid grey";
+	
+	//get error messages
+	var messageAry = [];
+	// time validation
+	if(getSelect.value === "--Time of Test--"){
+	    var selectError = "Please select a Time.";
+	    getSelect.style.border = "1px solid red";
+	    messageAry.push(selectError);
+	}
+	if(getInsunits.value === ""){
+	    var insunitsError = "Please enter the number of Units.";
+	    getInsunits.style.border = "1px solid red";
+	    messageAry.push(insunitsError);
+	}
+	
+	if(messageAry.length >= 1){
+	    for(var i = 0, j = messageAry.length; i < j; i++){
+		var txt = document.createElement('li');
+		txt.innerHTML = messageAry[i];
+		errMsg.appendChild(txt);
+	    }
+	    e.preventDefault();
+	    return false;
+	}else{
+	    //if good save data
+	    storeData();
+	}
     };
     
     
     //variable defaults
     var    timeofTest = ["--Time of Test--", "Morning", "Afternoon", "Evening"];
     var    insulinValue;
+    var    errMsg = $('errors');
     makeCats();
     
    
