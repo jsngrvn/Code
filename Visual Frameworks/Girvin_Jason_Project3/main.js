@@ -1,7 +1,7 @@
 // Jason Girvin
-// Week 2 - Project 2
+// Week 3 - Project 3
 // Visual Frameworks
-// 11/1/2011
+// 11/10/2011
 
 //wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
