@@ -189,6 +189,17 @@ window.addEventListener("DOMContentLoaded", function(){
 	editSubmit.key = this.key;
     }
     
+    function deleteItem(){
+	var ask = confirm("Are you certain you want to delete the Score?");
+	if(ask){
+	    localStorage.removeItem(this.key);
+	    alert("Score has been deleted!");
+	    window.location.reload();
+	}else{
+	    alert("The Score has not been Deleted!");
+	}
+    };
+    
     
     function clearLocal(){
         if(localStorage.length === 0){
