@@ -64,8 +64,16 @@ window.addEventListener("DOMContentLoaded", function(){
     }
 
 
-    function storeData(){
-        var id = Math.floor(Math.random()*1000001);
+    function storeData(key){
+        //if no key, brand new and needs key
+	if(!key){
+	    var id 		  = Math.floor(Math.random()*1000001);
+	}else{
+	    //set id to existing key, saves over previously saved data
+	    //this key is same as passed previously from edit submit event handler
+	    //to validate then passed into storedData
+	    id = key;
+	}
         //retrieve form field values and store locally in an object
         //objects properties contain an array which includes form label and inputs
         //getSelectedRadio();
@@ -139,7 +147,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	deleteLink.href = "#";
 	deleteLink.key = key;
 	var deleteText = "Delete Score";
-	//deleteLink.addEventListener("click", deleteItem);
+	deleteLink.addEventListener("click", deleteItem);
 	deleteLink.innerHTML = deleteText;
 	linksLi.appendChild(deleteLink);
     };
@@ -227,9 +235,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	    e.preventDefault();
 	    return false;
 	}else{
-	    //if good save data
-	    storeData();
-	}
+	    //if good save data, send key value (came from editData)
+	    //key value was passed through nearly every function as a prop.
+	    storeData(this.key);
+	};
     };
     
     
