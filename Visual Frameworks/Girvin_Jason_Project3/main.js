@@ -97,6 +97,7 @@ window.addEventListener("DOMContentLoaded", function(){
         $('items').style.display = "block";
         for (var i=0, len=localStorage.length; i<len; i++){
             var makeli = document.createElement('li');
+	    var linksLi = document.createElement('li');
             makeList.appendChild(makeli);
             var key = localStorage.key(i);
             var value = localStorage.getItem(key);
@@ -109,10 +110,77 @@ window.addEventListener("DOMContentLoaded", function(){
                 makeSubList.appendChild(makeSubLi);
                 var optSubText = obj[n][0]+" "+obj[n][1];
                 makeSubLi.innerHTML = optSubText;
-                }
+	        makeSubList.appendChild(linksLi);
+		}
+	    makeItemLinks(localStorage.key(i), linksLi); //creates edit and delete links for items in local storage
             }
         
         };
+	
+    //make item links
+    //creates edit and delete options for links in local storage
+    function makeItemLinks(key, linksLi){
+	//edit single item link
+	var editLink = document.createElement('a');
+	editLink.href = "#";
+	editLink.key = key;
+	var editText = "Edit Score";
+	editLink.addEventListener("click", editItem);
+	editLink.innerHTML = editText;
+	linksLi.appendChild(editLink);
+	
+	//creates a break but I am intentionally leaving out, I have them seperated in CSS
+	//add link break
+	//var breakTag = document.createElement('br');
+	//linksLi.appendChild(breakTag);
+	
+	//add delete
+	var deleteLink = document.createElement('a');
+	deleteLink.href = "#";
+	deleteLink.key = key;
+	var deleteText = "Delete Score";
+	//deleteLink.addEventListener("click", deleteItem);
+	deleteLink.innerHTML = deleteText;
+	linksLi.appendChild(deleteLink);
+    };
+    
+    
+    function editItem(){
+	//get data from item in local storage
+	var value = localStorage.getItem(this.key);
+	var item = JSON.parse(value);
+	
+	//show form
+	toggleControls("off");
+	
+	//pop. form fields with current LS values
+	$('testDate').value = item.testDate[1];
+	$('groups').value = item.select[1];
+	$('tscore').value = item.tscore[1];
+	var radios = document.forms[0].radios;
+	for(var i=0; i<radios.length; i++){
+	    if(radios[i].value == "Humalog" && item.radios[1] == "Humalog"){
+		radios[i].setAttribute("checked", "checked");
+	    }else if(radios[i].value == "Lantus" && item.radios[1] == "Lantus"){
+		radios[i].setAttribute("checked", "checked");
+	    }else if(radios[i].value == "Novalog" && item.radios[1] == "Novalog"){
+		radios[i].setAttribute("checked", "checked");
+	    }; 
+	}
+	$('insunits').value = item.insunits[1];
+	$('addlinfo').value = item.addlinfo[1];
+	
+	// remove the initial listener from the input "save score" button
+	save.removeEventListener("click", storeData);
+	//change submit button value to say edit
+	$('submit').value = "Edit Score";
+	var editSubmit = $('submit');
+	//save key value established in this function as a prop. of the editSubmit event
+	//ability to use that value when saving edited data
+	editSubmit.addEventListener("click", validate);
+	editSubmit.key = this.key;
+    }
+    
     
     function clearLocal(){
         if(localStorage.length === 0){
@@ -124,6 +192,11 @@ window.addEventListener("DOMContentLoaded", function(){
             return false;
         }
         
+    };
+    
+    function validate(){
+    	
+	
     };
     
     
@@ -141,7 +214,7 @@ window.addEventListener("DOMContentLoaded", function(){
     clearData.addEventListener("click", clearLocal);
 
     var save = $('submit');
-    save.addEventListener("click", storeData);
+    save.addEventListener("click", validate);
     
 
 });
