@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 $('displayData').style.display = "inline";
                 $('addNew').style.display = "none";
                 $('items').style.display = "none";
-                $('submit').style.display = "none";
+                $('submit').style.display = "inline";
                 break;
             default:
                 return false;
@@ -125,6 +125,43 @@ window.addEventListener("DOMContentLoaded", function(){
         
         };
 	
+    function editItem(){
+	//get data from item in local storage
+	var value = localStorage.getItem(this.key);
+	var item = JSON.parse(value);
+	
+	//show form
+	toggleControls("off");
+	
+	//pop. form fields with current LS values
+	$('testDate').value = item.testDate[1];
+	$('groups').value = item.select[1];
+	$('tscore').value = item.tscore[1];
+	//var radios = document.forms[0].radios;
+	var radios = document.getElementsByName("insulin");
+	for(var i=0; i<radios.length; i++){
+	    if(radios[i].value == "Humalog" && item.radios[1] == "Humalog"){
+		radios[i].setAttribute("checked", "checked");
+	    }else if(radios[i].value == "Lantus" && item.radios[1] == "Lantus"){
+		radios[i].setAttribute("checked", "checked");
+	    }else if(radios[i].value == "Novalog" && item.radios[1] == "Novalog"){
+		radios[i].setAttribute("checked", "checked");
+	    }; 
+	}
+	$('insunits').value = item.insunits[1];
+	$('addlinfo').value = item.addlinfo[1];
+	
+	// remove the initial listener from the input "save score" button
+	save.removeEventListener("click", storeData);
+	//change submit button value to say edit
+	$('submit').value = "Edit Score";
+	var editSubmit = $('submit');
+	//save key value established in this function as a prop. of the editSubmit event
+	//ability to use that value when saving edited data
+	editSubmit.addEventListener("click", validate);
+	editSubmit.key = this.key;
+    }
+    
     //make item links
     //creates edit and delete options for links in local storage
     function makeItemLinks(key, linksLi){
@@ -151,43 +188,6 @@ window.addEventListener("DOMContentLoaded", function(){
 	deleteLink.innerHTML = deleteText;
 	linksLi.appendChild(deleteLink);
     };
-    
-    
-    function editItem(){
-	//get data from item in local storage
-	var value = localStorage.getItem(this.key);
-	var item = JSON.parse(value);
-	
-	//show form
-	toggleControls("off");
-	
-	//pop. form fields with current LS values
-	$('testDate').value = item.testDate[1];
-	$('groups').value = item.select[1];
-	$('tscore').value = item.tscore[1];
-	var radios = document.forms[0].radios;
-	for(var i=0; i<radios.length; i++){
-	    if(radios[i].value == "Humalog" && item.radios[1] == "Humalog"){
-		radios[i].setAttribute("checked", "checked");
-	    }else if(radios[i].value == "Lantus" && item.radios[1] == "Lantus"){
-		radios[i].setAttribute("checked", "checked");
-	    }else if(radios[i].value == "Novalog" && item.radios[1] == "Novalog"){
-		radios[i].setAttribute("checked", "checked");
-	    }; 
-	}
-	$('insunits').value = item.insunits[1];
-	$('addlinfo').value = item.addlinfo[1];
-	
-	// remove the initial listener from the input "save score" button
-	save.removeEventListener("click", storeData);
-	//change submit button value to say edit
-	$('submit').value = "Edit Score";
-	var editSubmit = $('submit');
-	//save key value established in this function as a prop. of the editSubmit event
-	//ability to use that value when saving edited data
-	editSubmit.addEventListener("click", validate);
-	editSubmit.key = this.key;
-    }
     
     function deleteItem(){
 	var ask = confirm("Are you certain you want to delete the Score?");
