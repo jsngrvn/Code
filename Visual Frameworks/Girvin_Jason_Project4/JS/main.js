@@ -114,6 +114,7 @@ window.addEventListener("DOMContentLoaded", function(){
             var obj = JSON.parse(value);
             var makeSubList = document.createElement('ul');
             makeli.appendChild(makeSubList);
+	    getImage(obj.select[1], makeSubList);
             for (var n in obj){
                 var makeSubLi = document.createElement('li');
                 makeSubList.appendChild(makeSubLi);
@@ -126,6 +127,16 @@ window.addEventListener("DOMContentLoaded", function(){
         
         };
 	
+    //get image based on select
+    function getImage(imgName, makeSubList){
+	var imageLi = document.createElement('li');
+	makeSubList.appendChild(imageLi);
+	var newImage = document.createElement('img');
+	var setSrc = newImage.setAttribute("src", "images/"+ imgName +".png");
+	imageLi.appendChild(newImage);
+    }
+    
+    
     //JSON object to autopopulate data in local storage
     function autoFillData(){
 	var json = {
@@ -137,6 +148,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		"insunits": ["Units Taken:", "35"],
 		"addlinfo": ["addlinfo", "Nothing to see here but a test score!"]
 		},
+		
 	    "score2":{
 		"testDate": ["Test Date:", "04-30-2011"],
 		"select"  : ["Time of Test:", "Evening"],
@@ -144,6 +156,15 @@ window.addEventListener("DOMContentLoaded", function(){
 		"radios"  : ["Insulin Taken:", "Lantus"],
 		"insunits": ["Units Taken:", "12"],
 		"addlinfo": ["addlinfo", "Still nothing, keep moving..."]
+		},
+		
+	    "score3":{
+		"testDate": ["Test Date:", "05-3-2011"],
+		"select"  : ["Time of Test:", "Afternoon"],
+		"tscore"  : ["Score:", "88"],
+		"radios"  : ["Insulin Taken:", "Novalog"],
+		"insunits": ["Units Taken:", "101"],
+		"addlinfo": ["addlinfo", "Now I am just showing off."]
 		}
 	    
 	    };
