@@ -146,7 +146,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		"tscore"  : ["Score:", "150"],
 		"radios"  : ["Insulin Taken:", "Humalog"],
 		"insunits": ["Units Taken:", "35"],
-		"addlinfo": ["addlinfo", "Nothing to see here but a test score!"]
+		"addlinfo": ["Additional Info:", "Nothing to see here but a test score!"]
 		},
 		
 	    "score2":{
@@ -155,7 +155,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		"tscore"  : ["Score:", "100"],
 		"radios"  : ["Insulin Taken:", "Lantus"],
 		"insunits": ["Units Taken:", "12"],
-		"addlinfo": ["addlinfo", "Still nothing, keep moving..."]
+		"addlinfo": ["Additional Info:", "Still nothing, keep moving..."]
 		},
 		
 	    "score3":{
@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		"tscore"  : ["Score:", "88"],
 		"radios"  : ["Insulin Taken:", "Novalog"],
 		"insunits": ["Units Taken:", "101"],
-		"addlinfo": ["addlinfo", "Now I am just showing off."]
+		"addlinfo": ["Additional info:", "Now I am just showing off."]
 		}
 	    
 	    };
