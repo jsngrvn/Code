@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    
+    
+    <!---Jason Girvin-->
+    <!-- Visual Frameworks - Project 3-->
+    <!-- 11.10.2011-->
+
+    <!--Add Item Page-->
+<html>
+    <!--Setting Header Information-->
+    <head>
+        <meta charset="utf-8" />
+        <!--setting description-->
+        <meta name="description" content="Diabetic Testing App" />
+        <!-- setting keywords-->
+        <meta name="keywords" content="diabetes, diabetic testing" />
+        <!-- Not indexing as site is not yet complete-->
+        <meta name="robots" content="noindex, nofollow" />
+        <!-- enabling view on IOS devices-->
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        
+        <!--Titling Doc-->
+        <title>Testing Entry Page</title>
+        
+        <!-- calling css "eventually"-->
+        <link href="CSS\styles.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    <body>
+        <!--Header section to seperate title-->
+        <header>
+            <h1>Complete the following fields to record</h1>
+        </header>
+        <!-- division to store all form data on page-->
+        <div>
+            <form action="#" method="post" id=formData >
+                <fieldset>
+                    <ul id="errors"></ul>
+                    <!--Testing information section-->
+                    <legend>Blood Glucose Information</legend>
+                    
+                    <!--section to seperate the date entry-->
+                    <div>
+                        <label for="testDate">Date</label>
+                        <input type="date" id="testDate" /></li>
+                    </div>
+                    <!--section to seperate the time of test selection box-->
+                    <ul>
+                        <li id ="select"><label for="select">Time</label>
+                    </ul>
+                    <!--seperate container for score section slider-->
+                    <div>
+                        <label for="tscore">Score</label>
+                        <input type="range" name="tscore" id="tscore" min="80" max="240" />
+                    </div>
+                </fieldset>
+                <!-- second fields set to seperate information on form-->
+                <fieldset>
+                    <!--legen name-->
+                    <legend>Insulin Information</legend>
+              
+                    <!-- container to hold the checkbox for insulin types-->
+                    <div>
+                        <label for="humalog">Humalog</label></li><input type="radio" id="humalog" value="Humalog" name="insulin" />
+                        <label for="lantus">Lantus</label></li><input type="radio" id="lantus" value="Lantus" name="insulin" />
+                        <label for="novalog">Novalog</label></li><input type="radio" id="novalog" value="Novalog" name="insulin" />
+                    </div>
+                    
+                    <!-- container to hold the numeric units taken field-->
+                    <div>
+                        <label for="insunits">Units</label><input type="number" id="insunits" min="0" />
+                    </div>
+                    
+                    <!-- conatiner to hold the addl info text entry-->
+                    <div>
+                        <label for="addlinfo">Additional Info</label><textarea id="addlinfo"></textarea>
+                        <input type="hidden" value="true" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <!-- footer to hold the submit button and links-->
+        <footer>
+            <!-- submit button-->
+            <div>
+                <input type="submit" value="Submit Score" class="button" id="submit">
+            </div>
+            <!--Links to clear and display form data-->
+            <a href="#" id="clearData">Cleared Stored Data</a>
+            <a href="#" id="displayData">Display Data</a>
+            <a href="Additem.html" id="addNew" style="display:none">Add Another Score</a>
+        </footer>
+        <!-- calling JavaScript "eventually"-->
+        <script src="JS\main.js" type="text/javascript"></script>
+    </body>  
+</html>
