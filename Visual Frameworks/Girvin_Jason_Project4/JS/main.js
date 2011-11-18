@@ -1,7 +1,7 @@
 // Jason Girvin
-// Week 3 - Project 3
+// Week 4 - Project 4
 // Visual Frameworks
-// 11/10/2011
+// 11/17/2011
 
 //wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
@@ -94,7 +94,8 @@ window.addEventListener("DOMContentLoaded", function(){
     function getData(){
         toggleControls("on");
         if (localStorage.length === 0){
-            alert("There is no data to display.");
+	    autoFillData();
+            alert("There is no data to display, so default data was added!");
         }
         //write data from local to screen
         var makeDiv = document.createElement('div');
@@ -124,6 +125,35 @@ window.addEventListener("DOMContentLoaded", function(){
             }
         
         };
+	
+    //JSON object to autopopulate data in local storage
+    function autoFillData(){
+	var json = {
+	    "score1":{
+		"testDate": ["Test Date:", "04-01-2011"],
+		"select"  : ["Time of Test:", "Morning"],
+		"tscore"  : ["Score:", "150"],
+		"radios"  : ["Insulin Taken:", "Humalog"],
+		"insunits": ["Units Taken:", "35"],
+		"addlinfo": ["addlinfo", "Nothing to see here but a test score!"]
+		},
+	    "score2":{
+		"testDate": ["Test Date:", "04-30-2011"],
+		"select"  : ["Time of Test:", "Evening"],
+		"tscore"  : ["Score:", "100"],
+		"radios"  : ["Insulin Taken:", "Lantus"],
+		"insunits": ["Units Taken:", "12"],
+		"addlinfo": ["addlinfo", "Still nothing, keep moving..."]
+		}
+	    
+	    };
+		
+	//store JSON object into local storage
+	for(var n in json){
+	    var id		= Math.floor(Math.random()*10000001);
+	    localStorage.setItem(id, JSON.stringify(json[n]));
+	    };
+	};
 	
     function editItem(){
 	//get data from item in local storage
