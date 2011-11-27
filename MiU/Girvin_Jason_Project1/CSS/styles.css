@@ -11,7 +11,7 @@ header{
 .indexheader{
     background-color: white;
     background-image: none;
-    padding-left: 225px;
+
 }
 
 h1{
@@ -35,19 +35,18 @@ body{
 .indexbody{
     background-color: white;
     color: white;
+    max-width: 480px;
     
 }
 
 .CTA{
     background-image: url("../images/CTA.png");
-    background-position: top right;
     background-repeat: no-repeat;
-    padding-top: 100px;
-    padding-left: 150px;
-    height:80px;
-
     background-color: black;
+    padding-top: 150px;
+
     position: relative;
+
 
 }
 
@@ -92,6 +91,7 @@ ul{
 
 .buttondiv{
 
+
 }
 
 a:link {
@@ -130,7 +130,7 @@ a:active {
 	padding:inherit;
 	text-decoration:none;
 	text-shadow:2px 2px 5px #b23e35;
-        width: 400px;
+        width: 300px;
 
 }
 
