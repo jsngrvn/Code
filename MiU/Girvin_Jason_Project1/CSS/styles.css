@@ -46,6 +46,7 @@ body{
     height:80px;
     background-size: 100%;
     background-color: black;
+    position: relative;
 
 }
 
@@ -81,9 +82,6 @@ a{
     color: blue;
 }
 
-.button{
-    margin-left:30px;
-}
 
 ul{    
     list-style-type: none;
@@ -104,5 +102,78 @@ a:hover {
 
 a:active {
     text-decoration: underline;
+}
+
+
+.button {
+	-moz-box-shadow:inset 1px 1px 5px 1px #f29c93;
+	-webkit-box-shadow:inset 1px 1px 5px 1px #f29c93;
+	box-shadow:inset 1px 1px 5px 1px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-moz-border-radius:27px;
+	-webkit-border-radius:27px;
+	border-radius:27px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Advent;
+	font-size:24px;
+	font-weight:bold;
+	padding:inherit;
+	text-decoration:none;
+	text-shadow:2px 2px 5px #b23e35;
+        width: 400px;
+}
+
+.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+}
+
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.CTAButton {
+	-moz-box-shadow:inset 1px 1px 5px 1px #f29c93;
+	-webkit-box-shadow:inset 1px 1px 5px 1px #f29c93;
+	box-shadow:inset 1px 1px 5px 1px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-moz-border-radius:27px;
+	-webkit-border-radius:27px;
+	border-radius:27px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Advent;
+	font-size:20px;
+        text-align:center;
+        height: 30px;
+	padding:5px 65px;
+	text-decoration:none;
+	text-shadow:2px 2px 5px #b23e35;
+        width: 200px;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+}
+
+.CTAButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+}
+
+.CTAButton:active {
+	position:relative;
+	top:1px;
 }
 
