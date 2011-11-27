@@ -38,9 +38,11 @@ body{
     background-image: url("../images/CTA.png");
     background-position: top right;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding-top: 100px;
+    padding-left: 150px;
     height: 250px;
     background-size: 100%;
+
 }
 
 p{
