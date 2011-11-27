@@ -1,11 +1,20 @@
-
-h1{
-    background-color: #25547b;
-    text-align: center;
+header{
+    background-image: url("../images/toplogo.png");
+    background-position: top right;
+    background-color: black;
+    background-repeat: no-repeat;
     color: white;
     padding: 10px;
+    height: 20px;
+}
+h1{
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    color: black;
+    padding: 10px;
     margin: auto;
-    border-bottom: solid;
+
 }
 
 h2{
@@ -13,19 +22,35 @@ h2{
 }
 
 body{
-    border: solid;
-    font-family: sans-serif;
-    outline: groove;
-    outline-color: grey;
+
+    font-family: Advent;
+
+
+}
+
+.indexbody{
+    background-color: black;
+    color: white;
+    
+}
+
+.CTA{
+    background-image: url("../images/CTA.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding: 20px;
+    height: 250px;
+    background-size: 100%;
 }
 
 p{
     padding: 10px;
+    background-repeat: no-repeat;
 }
 
 fieldset{
     border: none;
-    margin: 5px;    
+    margin: 5px;
 }
 
 div{
@@ -39,7 +64,7 @@ label{
 legend{
     font-size: 20px;
     border-bottom-style: groove;
-    color: #25547b;
+    color: red;
 }
 
 a{
