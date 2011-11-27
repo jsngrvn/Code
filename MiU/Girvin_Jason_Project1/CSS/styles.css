@@ -7,6 +7,12 @@ header{
     padding: 10px;
     height: 20px;
 }
+
+.indexheader{
+    background-color: white;
+    background-image: none;
+}
+
 h1{
     padding: 10px;
     background-color: white;
@@ -22,14 +28,11 @@ h2{
 }
 
 body{
-
     font-family: Advent;
-
-
 }
 
 .indexbody{
-    background-color: black;
+    background-color: white;
     color: white;
     
 }
@@ -40,10 +43,13 @@ body{
     background-repeat: no-repeat;
     padding-top: 100px;
     padding-left: 150px;
-    height: 250px;
+    height:80px;
     background-size: 100%;
+    background-color: black;
 
 }
+
+
 
 p{
     padding: 10px;
