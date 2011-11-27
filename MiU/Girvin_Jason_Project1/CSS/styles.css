@@ -11,6 +11,7 @@ header{
 .indexheader{
     background-color: white;
     background-image: none;
+    padding-left: 225px;
 }
 
 h1{
@@ -64,6 +65,7 @@ fieldset{
 
 div{
     padding: inherit;
+
 }
 
 label{
@@ -86,6 +88,10 @@ a{
 ul{    
     list-style-type: none;
     padding: inherit;
+}
+
+.buttondiv{
+
 }
 
 a:link {
@@ -125,6 +131,7 @@ a:active {
 	text-decoration:none;
 	text-shadow:2px 2px 5px #b23e35;
         width: 400px;
+
 }
 
 .button:hover {
@@ -154,6 +161,7 @@ a:active {
 	color:#ffffff;
 	font-family:Advent;
 	font-size:20px;
+        font-weight:bold;
         text-align:center;
         height: 30px;
 	padding:5px 65px;
@@ -161,8 +169,8 @@ a:active {
 	text-shadow:2px 2px 5px #b23e35;
         width: 200px;
         position: absolute;
-        right: 5px;
-        bottom: 5px;
+        right: 20px;
+        bottom: 20px;
 }
 
 .CTAButton:hover {
