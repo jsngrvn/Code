@@ -150,8 +150,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		},
 		
 	    "score2":{
-		"testDate": ["Test Date:", "04-30-2011"],
-		"select"  : ["Time of Test:", "Evening"],
+		"testDate": ["Test Date:", "04-01-2011"],
+		"select"  : ["Time of Test:", "Afternoon"],
 		"tscore"  : ["Score:", "100"],
 		"radios"  : ["Insulin Taken:", "Lantus"],
 		"insunits": ["Units Taken:", "12"],
@@ -159,7 +159,151 @@ window.addEventListener("DOMContentLoaded", function(){
 		},
 		
 	    "score3":{
-		"testDate": ["Test Date:", "05-3-2011"],
+		"testDate": ["Test Date:", "04-01-2011"],
+		"select"  : ["Time of Test:", "Evening"],
+		"tscore"  : ["Score:", "88"],
+		"radios"  : ["Insulin Taken:", "Novalog"],
+		"insunits": ["Units Taken:", "101"],
+		"addlinfo": ["Additional info:", "Now I am just showing off."]
+		},
+		
+	    "score4":{
+		"testDate": ["Test Date:", "04-02-2011"],
+		"select"  : ["Time of Test:", "Morning"],
+		"tscore"  : ["Score:", "150"],
+		"radios"  : ["Insulin Taken:", "Humalog"],
+		"insunits": ["Units Taken:", "35"],
+		"addlinfo": ["Additional Info:", "Nothing to see here but a test score!"]
+		},
+		
+	    "score5":{
+		"testDate": ["Test Date:", "04-02-2011"],
+		"select"  : ["Time of Test:", "Evening"],
+		"tscore"  : ["Score:", "100"],
+		"radios"  : ["Insulin Taken:", "Lantus"],
+		"insunits": ["Units Taken:", "12"],
+		"addlinfo": ["Additional Info:", "Still nothing, keep moving..."]
+		},
+		
+	    "score6":{
+		"testDate": ["Test Date:", "04-02-2011"],
+		"select"  : ["Time of Test:", "Afternoon"],
+		"tscore"  : ["Score:", "88"],
+		"radios"  : ["Insulin Taken:", "Novalog"],
+		"insunits": ["Units Taken:", "101"],
+		"addlinfo": ["Additional info:", "Now I am just showing off."]
+		},
+		
+	    "score7":{
+		"testDate": ["Test Date:", "04-03-2011"],
+		"select"  : ["Time of Test:", "Morning"],
+		"tscore"  : ["Score:", "150"],
+		"radios"  : ["Insulin Taken:", "Humalog"],
+		"insunits": ["Units Taken:", "35"],
+		"addlinfo": ["Additional Info:", "Nothing to see here but a test score!"]
+		},
+		
+	    "score8":{
+		"testDate": ["Test Date:", "04-03-2011"],
+		"select"  : ["Time of Test:", "Evening"],
+		"tscore"  : ["Score:", "100"],
+		"radios"  : ["Insulin Taken:", "Lantus"],
+		"insunits": ["Units Taken:", "12"],
+		"addlinfo": ["Additional Info:", "Still nothing, keep moving..."]
+		},
+		
+	    "score9":{
+		"testDate": ["Test Date:", "04-03-2011"],
+		"select"  : ["Time of Test:", "Afternoon"],
+		"tscore"  : ["Score:", "88"],
+		"radios"  : ["Insulin Taken:", "Novalog"],
+		"insunits": ["Units Taken:", "101"],
+		"addlinfo": ["Additional info:", "Now I am just showing off."]
+		},
+		
+	    "score10":{
+		"testDate": ["Test Date:", "04-04-2011"],
+		"select"  : ["Time of Test:", "Morning"],
+		"tscore"  : ["Score:", "150"],
+		"radios"  : ["Insulin Taken:", "Humalog"],
+		"insunits": ["Units Taken:", "35"],
+		"addlinfo": ["Additional Info:", "Nothing to see here but a test score!"]
+		},
+		
+	    "score11":{
+		"testDate": ["Test Date:", "04-04-2011"],
+		"select"  : ["Time of Test:", "Evening"],
+		"tscore"  : ["Score:", "100"],
+		"radios"  : ["Insulin Taken:", "Lantus"],
+		"insunits": ["Units Taken:", "12"],
+		"addlinfo": ["Additional Info:", "Still nothing, keep moving..."]
+		},
+		
+	    "score12":{
+		"testDate": ["Test Date:", "05-04-2011"],
+		"select"  : ["Time of Test:", "Afternoon"],
+		"tscore"  : ["Score:", "88"],
+		"radios"  : ["Insulin Taken:", "Novalog"],
+		"insunits": ["Units Taken:", "101"],
+		"addlinfo": ["Additional info:", "Now I am just showing off."]
+		},
+		
+	    "score13":{
+		"testDate": ["Test Date:", "04-05-2011"],
+		"select"  : ["Time of Test:", "Morning"],
+		"tscore"  : ["Score:", "150"],
+		"radios"  : ["Insulin Taken:", "Humalog"],
+		"insunits": ["Units Taken:", "35"],
+		"addlinfo": ["Additional Info:", "Nothing to see here but a test score!"]
+		},
+		
+	    "score14":{
+		"testDate": ["Test Date:", "04-05-2011"],
+		"select"  : ["Time of Test:", "Evening"],
+		"tscore"  : ["Score:", "100"],
+		"radios"  : ["Insulin Taken:", "Lantus"],
+		"insunits": ["Units Taken:", "12"],
+		"addlinfo": ["Additional Info:", "Still nothing, keep moving..."]
+		},
+		
+	    "score15":{
+		"testDate": ["Test Date:", "05-05-2011"],
+		"select"  : ["Time of Test:", "Afternoon"],
+		"tscore"  : ["Score:", "88"],
+		"radios"  : ["Insulin Taken:", "Novalog"],
+		"insunits": ["Units Taken:", "101"],
+		"addlinfo": ["Additional info:", "Now I am just showing off."]
+		},
+		
+	    "score16":{
+		"testDate": ["Test Date:", "04-06-2011"],
+		"select"  : ["Time of Test:", "Morning"],
+		"tscore"  : ["Score:", "150"],
+		"radios"  : ["Insulin Taken:", "Humalog"],
+		"insunits": ["Units Taken:", "35"],
+		"addlinfo": ["Additional Info:", "Nothing to see here but a test score!"]
+		},
+		
+	    "score18":{
+		"testDate": ["Test Date:", "04-06-2011"],
+		"select"  : ["Time of Test:", "Evening"],
+		"tscore"  : ["Score:", "100"],
+		"radios"  : ["Insulin Taken:", "Lantus"],
+		"insunits": ["Units Taken:", "12"],
+		"addlinfo": ["Additional Info:", "Still nothing, keep moving..."]
+		},
+		
+	    "score19":{
+		"testDate": ["Test Date:", "05-06-2011"],
+		"select"  : ["Time of Test:", "Afternoon"],
+		"tscore"  : ["Score:", "88"],
+		"radios"  : ["Insulin Taken:", "Novalog"],
+		"insunits": ["Units Taken:", "101"],
+		"addlinfo": ["Additional info:", "Now I am just showing off."]
+		},
+		
+	    "score20":{
+		"testDate": ["Test Date:", "05-07-2011"],
 		"select"  : ["Time of Test:", "Afternoon"],
 		"tscore"  : ["Score:", "88"],
 		"radios"  : ["Insulin Taken:", "Novalog"],
