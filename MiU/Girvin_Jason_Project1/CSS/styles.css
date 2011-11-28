@@ -2,6 +2,7 @@ header{
     background-image: url("../images/toplogo.png");
     background-position: top right;
     background-color: black;
+    background-repeat: no-repeat;
     color: white;
     padding: 10px;
     height: 28px;
