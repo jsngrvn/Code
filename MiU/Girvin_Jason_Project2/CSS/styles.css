@@ -23,7 +23,7 @@ h1{
     text-align: center;
     color: black;
     padding: 10px;
-    margin: auto;
+    margin:0 auto;
 }
 
 h2{
@@ -121,6 +121,11 @@ a:active {
 	text-decoration:none;
 	text-shadow:2px 2px 5px #b23e35;
         width: 300px;
+	margin:auto;
+	padding: 10px;
+	float: left;
+	border-bottom: 1px solid #FFFFFF;
+	cursor: pointer;
 
 
 }
@@ -159,9 +164,10 @@ a:active {
 	text-decoration:none;
 	text-shadow:2px 2px 5px #b23e35;
         width: 200px;
-        position: absolute;
+        position: absolute;  
         right: 10px;
         bottom: 20px;
+	margin:auto; 
 }
 
 .CTAButton:hover {
@@ -176,3 +182,17 @@ a:active {
 	top:1px;
 }
 
+.accordionButton {
+	padding: 10px;
+	width: 300px;
+	float: left;
+	border-bottom: 1px solid #FFFFFF;
+	cursor: pointer;
+	}
+ 
+.accordionContent {	
+	width: 300px;
+	float: left;
+	display: none;
+	padding: 10px;
+	}
