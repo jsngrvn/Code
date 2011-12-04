@@ -1,0 +1,131 @@
+
+h1{
+    font-family: Advent;
+}
+
+h2{
+    font-family: Advent;
+    color: Red;
+    border-bottom-style: groove;
+}
+
+h3{
+    color: red;
+    font-family: Advent;
+}
+
+p{
+    font-family: Advent;
+    color: black;
+
+}
+
+a{
+    font-family: Advent;
+
+}
+
+.additemlinks{
+    visibility: hidden;
+   
+}
+
+.buttonimg{
+    
+    padding-top: 15px;
+    Padding-left: 15px;
+}
+
+body{
+    font-family: Advent;
+}
+
+ul{    
+    list-style-type: none;
+    padding: inherit;
+
+}
+
+.testdata{
+    list-style: none;
+    border-bottom-style: groove;
+    border-bottom-color: red;
+}
+
+.footerstyle{
+    
+    
+}
+
+.CTA{
+    background-image: url("../images/CTA.png");
+    background-color:black;
+    position:relative;
+    height:180px;
+    background-repeat: no-repeat;
+    
+}
+
+.CTAButton{
+    -moz-box-shadow:inset 1px 1px 5px 1px #f29c93;
+    -webkit-box-shadow:inset 1px 1px 5px 1px #f29c93;
+    box-shadow:inset 1px 1px 5px 1px #f29c93;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+    background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+    background-color:#fe1a00;
+    -moz-border-radius:27px;
+    -webkit-border-radius:27px;
+    border-radius:27px;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Advent;
+    font-weight:bold;
+    padding:inherit;
+    text-decoration:none;
+    text-align: center;
+    text-shadow:2px 2px 5px #b23e35;
+    font-family: Advent;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    height: 30px;
+    width: 50%;
+
+}
+
+.header{
+
+    background-image: url("../images/toplogo.png");
+    background-position: top right;
+    background-color: black;
+    background-repeat: no-repeat;
+    color: white;
+    height: 50px;
+
+}
+
+.button {
+	-moz-box-shadow:inset 1px 1px 5px 1px #f29c93;
+	-webkit-box-shadow:inset 1px 1px 5px 1px #f29c93;
+	box-shadow:inset 1px 1px 5px 1px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-moz-border-radius:27px;
+	-webkit-border-radius:27px;
+	border-radius:27px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Advent;
+	font-weight:bold;
+	padding:inherit;
+	text-decoration:none;
+	text-shadow:2px 2px 5px #b23e35;
+        width: 100%;
+}
+
+
+
+    

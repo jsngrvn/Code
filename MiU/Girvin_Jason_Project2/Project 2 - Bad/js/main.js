@@ -96,13 +96,20 @@ window.addEventListener("DOMContentLoaded", function(){
         if (localStorage.length === 0){
 	    autoFillData();
             alert("There is no data to display, so default data was added!");
+	    //trying something
+	    
         }
         //write data from local to screen
         var makeDiv = document.createElement('div');
-        makeDiv.setAttribute("id", "items");
+        makeDiv.setAttribute('id', 'items');
+	makeDiv.setAttribute('data-role', 'page');
+	
         var makeList = document.createElement('ul');
+	makeList.setAttribute('data-role', "listview");
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
+	
+	
         $('items').style.display = "block";
         for (var i=0, len=localStorage.length; i<len; i++){
             var makeli = document.createElement('li');
@@ -466,17 +473,4 @@ window.addEventListener("DOMContentLoaded", function(){
     save.addEventListener("click", validate);
     
 
-});
-
-$(document).ready(function() {
- 
-	//ACCORDION BUTTON ACTION	
-	$('div.accordionButton').click(function() {
-		$('div.accordionContent').slideUp('normal');	
-		$(this).next().slideDown('normal');
-	});
- 
-	//HIDE THE DIVS ON PAGE LOAD	
-	$("div.accordionContent").hide();
- 
 });
