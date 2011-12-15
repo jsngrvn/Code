@@ -1,0 +1,421 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Welcome, Diabetic Test Application</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!--index page-->
+	<div data-role="page" id="home" >
+		
+		<div data-role="header" data-position="fixed" class=header>
+
+		</div>
+		
+		<div data-role="content">
+			
+			
+			<input type="search" name="search" id="searc-basic" value="" />
+			</br>
+			
+			<div class=CTA>
+				<a href="#additem" data-role="button" class=CTAButton>Try it!</a>
+			</div>
+			
+			<p><a href="#additem" data-role="button" class=button>Record</a></p>
+			<p><a href="#prevscores" data-role="button" class=button>Previous Scores</a></p>
+			<p><a href="#subscribe" data-role="button" class=button>Subscribe</a></p>
+			<p><a href="#aboutus" data-role="button" class=button>About Us</a></p>
+			
+		</div>
+		
+		
+				
+	</div>
+	
+	<div data-role="page" id="subscribe">
+		
+		<div data-role="header" data-position="fixed" class=header>
+
+		</div>
+		
+		<div data-role="content">
+			
+			<img src="images/coming_soon.jpeg" class=imgpos />
+			
+		</div>
+		
+		<div data-role="footer" data-position="fixed" class=footerstyle>
+				
+			<h3><a href="#home" data-role="button" data-icon="arrow-l">Back</a></h3>
+					
+		</div>
+		
+	</div>
+	
+	<div data-role="page" id="aboutus">
+		
+		<div data-role="header" data-position="fixed" class=header>
+
+		</div>
+		
+		<div data-role="content">
+			
+			<img src="images/coming_soon.jpeg" class=imgpos />
+		
+		</div>
+		
+		<div data-role="footer" data-position="fixed" class=footerstyle>
+				
+			<h3><a href="#home" data-role="button" data-icon="arrow-l">Back</a></h3>
+					
+		</div>
+		
+	</div>
+	
+	
+	<!--add score-->
+	<div data-role="page" id="additem">
+		
+		<div data-role="header" data-position="fixed" class=header></div>
+		
+		<div data-role="content">
+			<form action="#" method="post" id=formData >
+				<fieldset>
+					<ul id="errors"></ul>
+					<!--Testing information section-->
+					<legend><h2>Glucose Information</h2></legend>
+					</br>
+					<!--section to seperate the date entry-->
+					<div>
+					    <label for="testDate">Date</label>
+					    <input type="date" id="testDate" value="04-01-2011"/></li>
+					</div>
+					</br>
+					<!--section to seperate the time of test selection box-->
+					<ul>
+					    <li id ="select"><label for="select">Time</label>
+					</ul>
+					</br>
+					<!--seperate container for score section slider-->
+					<div>
+					    <label for="tscore">Score</label>
+					    <input type="range" name="tscore" id="tscore" min="0" max="1000" value="0"/>
+					</div>
+				</fieldset>
+				</br>
+				</br>
+				<fieldset>
+					<!--legend name-->
+					<legend><h2>Insulin Information</h2></legend>
+					</br>
+					<!-- container to hold the checkbox for insulin types-->
+					<div>
+					    <label for="humalog">Humalog</label></li><input type="radio" id="humalog" value="Humalog" name="insulin" />
+					    <label for="lantus">Lantus</label></li><input type="radio" id="lantus" value="Lantus" name="insulin" />
+					    <label for="novalog">Novalog</label></li><input type="radio" id="novalog" value="Novalog" name="insulin" />
+					</div>
+					</br>
+					<!-- container to hold the numeric units taken field-->
+					<div>
+					    <label for="insunits">Units</label><input type="number" id="insunits" min="0"/>
+					</div>
+					</br>
+					<!-- conatiner to hold the addl info text entry-->
+					<div>
+					    <label for="addlinfo">Additional Info</label><textarea id="addlinfo"></textarea>
+					    <input type="hidden" value="true"/>
+					</div>
+					</br>
+			    </fieldset>
+			</form>
+			
+			<!-- submit button-->
+			</br>
+			<div class=subbut>
+				<input type="submit" value="Submit Score" id="submit">
+			</div>
+			<!--Links to clear and display form data-->
+			</br>
+			<a href="#" id="clearData" class="additemlinks">Cleared Stored Data</a>
+			<a href="#" id="displayData" class="additemlinks">Display Data</a>
+			<a href="#additem" id="addNew" style="display:none">Add Another Score</a>
+				
+			</div>
+		
+			<div data-role="footer" data-position="fixed" class=footerstyle>
+				
+				<h3><a href="#home" data-role="button" data-icon="arrow-l">Back</a></h3>
+					
+			</div>
+		</div>
+	
+		
+	
+		<!-- previous scores page-->
+		
+		<div data-role="page" id="prevscores">
+			
+			<div data-role="header" data-position="fixed" class=header></div>
+			
+			</br>
+			<div data-role="content">
+				
+				<ul data-role="listview" data-inset="true">
+					
+					<li>
+						<a href="#morscores">
+							<img src="images/Morning.png" class="buttonimg"/>
+							<h3>Morning Scores</h3>
+							<p>Collection of Morning test scores</p>
+						</a>
+					</li>
+					
+					<li>
+						<a href="#aftscores">
+							<img src="images/Afternoon.png" class="buttonimg"/>
+							<h3>Afternoon Scores</h3>
+							<p>Collection of Afternoon test scores</p>
+						</a>
+					</li>
+					
+					<li>
+						<a href="#evescores">
+							<img src="images/Evening.png" class="buttonimg"/>
+							<h3>Evening Scores</h3>
+							<p>Collection of Evening test scores</p>
+						</a>
+					</li>
+					
+					
+				</ul>
+				
+			</div>
+			
+			<div data-role="footer" data-position="fixed" class=footerstyle>
+				
+				<h3><a href="#home" data-role="button" data-icon="arrow-l">Back</a></h3>
+			</div>
+		</div>
+		
+		<div data-role="page" id="morscores">
+				
+				<div data-role="header" data-position="fixed" class=header></div>
+				
+				<div data-role="content">
+					
+					<p>
+						<li class=testdata>
+						 <p><h3>Date: 	     04-01-2011</h3></p>
+						 <p>Time of Test:    Morning</p>
+						 <p>Score:           88</p>
+						 <p>Insulin Taken:   Novalog</p>
+						 <p>Units Taken:     1</p>
+						 <p>Additional info: Now I am just showing off</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     04-02-2011</h3></p>
+						 <p>Time of Test:    Morning</p>
+						 <p>Score:           98</p>
+						 <p>Insulin Taken:   Humalog</p>
+						 <p>Units Taken:     10</p>
+						 <p>Additional info: and again..</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     04-03-2011</h3></p>
+						 <p>Time of Test:    Morning</p>
+						 <p>Score:           108</p>
+						 <p>Insulin Taken:   Lantus</p>
+						 <p>Units Taken:     20</p>
+						 <p>Additional info: again and again...</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     04-04-2011</h3></p>
+						 <p>Time of Test:    Morning</p>
+						 <p>Score:           118</p>
+						 <p>Insulin Taken:   Novalog</p>
+						 <p>Units Taken:     4</p>
+						 <p>Additional info: once more.</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     04-05-2011</h3></p>
+						 <p>Time of Test:    Morning</p>
+						 <p>Score:           188</p>
+						 <p>Insulin Taken:   Lantus</p>
+						 <p>Units Taken:     5</p>
+						 <p>Additional info: final note</p>
+						</li>
+					</p>
+					
+				</div>
+				
+				<div data-role="footer" data-position="fixed" class=footerstyle>
+				
+					<h3><a href="#prevscores" data-role="button" data-icon="arrow-l">Back</a></h3>
+					
+				</div>
+			
+		</div>
+				
+		<div data-role="page" id="aftscores">
+				
+				<div data-role="header" data-position="fixed" class=header></div>
+				
+				<div data-role="content">
+					
+					<p>
+						<li class=testdata>
+						 <p><h3>Date: 	     05-01-2011</h3></p>
+						 <p>Time of Test:    Afternoon</p>
+						 <p>Score:           188</p>
+						 <p>Insulin Taken:   Novalog</p>
+						 <p>Units Taken:     1</p>
+						 <p>Additional info: First Note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-02-2011</h3></p>
+						 <p>Time of Test:    Afternoon</p>
+						 <p>Score:           298</p>
+						 <p>Insulin Taken:   Humalog</p>
+						 <p>Units Taken:     10</p>
+						 <p>Additional info: Second note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-03-2011</h3></p>
+						 <p>Time of Test:    Afternoon</p>
+						 <p>Score:           308</p>
+						 <p>Insulin Taken:   Lantus</p>
+						 <p>Units Taken:     20</p>
+						 <p>Additional info: 3rd note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-04-2011</h3></p>
+						 <p>Time of Test:    Afternoon</p>
+						 <p>Score:           18</p>
+						 <p>Insulin Taken:   Novalog</p>
+						 <p>Units Taken:     4</p>
+						 <p>Additional info: fourth note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-05-2011</h3></p>
+						 <p>Time of Test:    Afternoon</p>
+						 <p>Score:           108</p>
+						 <p>Insulin Taken:   Lantus</p>
+						 <p>Units Taken:     5</p>
+						 <p>Additional info: final note</p>
+						</li>
+					</p>
+					
+				</div>
+				
+				<div data-role="footer" data-position="fixed" class=footerstyle>
+				
+					<h3><a href="#prevscores" data-role="button" data-icon="arrow-l">Back</a></h3>
+					
+				</div>
+			
+		</div>
+		
+		<div data-role="page" id="evescores">
+				
+				<div data-role="header" data-position="fixed" class=header></div>
+				
+				<div data-role="content">
+					
+					<p>
+						<li class=testdata>
+						 <p><h3>Date: 	     05-01-2011</h3></p>
+						 <p>Time of Test:    Evening</p>
+						 <p>Score:           148</p>
+						 <p>Insulin Taken:   Novalog</p>
+						 <p>Units Taken:     14</p>
+						 <p>Additional info: First Note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-02-2011</h3></p>
+						 <p>Time of Test:    Evening</p>
+						 <p>Score:           250</p>
+						 <p>Insulin Taken:   Humalog</p>
+						 <p>Units Taken:     0</p>
+						 <p>Additional info: Second note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-03-2011</h3></p>
+						 <p>Time of Test:    Evening</p>
+						 <p>Score:           301</p>
+						 <p>Insulin Taken:   Lantus</p>
+						 <p>Units Taken:     2</p>
+						 <p>Additional info: 3rd note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-04-2011</h3></p>
+						 <p>Time of Test:    Evening</p>
+						 <p>Score:           518</p>
+						 <p>Insulin Taken:   Novalog</p>
+						 <p>Units Taken:     41</p>
+						 <p>Additional info: fourth note</p>
+						</li>
+						
+						<li class=testdata>
+						 <p><h3>Date: 	     05-05-2011</h3></p>
+						 <p>Time of Test:    Evening</p>
+						 <p>Score:           100</p>
+						 <p>Insulin Taken:   Lantus</p>
+						 <p>Units Taken:     51</p>
+						 <p>Additional info: final note</p>
+						</li>
+					</p>
+					
+				</div>
+				
+				<div data-role="footer" data-position="fixed" class=footerstyle>
+				
+					<h3><a href="#prevscores" data-role="button" data-icon="arrow-l">Back</a></h3>
+					
+				</div>
+			
+		</div>
+	</div>
+	
+	
+		
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
