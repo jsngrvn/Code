@@ -9,10 +9,10 @@ GitHub Path
 
 	Index or starting page:
 
-	http://jsngrvn.github.com/Code/MiU/Girvin_Jason_Project3/Project_3_Good/Index.html
+	http://jsngrvn.github.com/Code/MiU/Girvin_Jason_Project3/Project_4_Good/Index.html
 
 ***Bad Design Principles***
 	
 	Index or startup page:
 	
-	http://jsngrvn.github.com/Code/MiU/Girvin_Jason_Project3/Project_3_Bad/Index.html
+	http://jsngrvn.github.com/Code/MiU/Girvin_Jason_Project3/Project_4_Bad/Index.html

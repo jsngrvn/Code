@@ -48,7 +48,21 @@ ul{
     padding: inherit;
 
 }
-
+.bgbg{
+    background-image: linear-gradient(bottom, rgb(168,168,168) 19%, rgb(245,245,245) 63%);
+    background-image: -o-linear-gradient(bottom, rgb(168,168,168) 19%, rgb(245,245,245) 63%);
+    background-image: -moz-linear-gradient(bottom, rgb(168,168,168) 19%, rgb(245,245,245) 63%);
+    background-image: -webkit-linear-gradient(bottom, rgb(168,168,168) 19%, rgb(245,245,245) 63%);
+    background-image: -ms-linear-gradient(bottom, rgb(168,168,168) 19%, rgb(245,245,245) 63%);
+    
+    background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.19, rgb(168,168,168)),
+	color-stop(0.63, rgb(245,245,245))
+);
+}
 .testdata{
     list-style: none;
     border-bottom-style: groove;
