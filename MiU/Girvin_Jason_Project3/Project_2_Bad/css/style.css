@@ -104,7 +104,7 @@ ul{
 
 .header{
 
-    
+    background-image: url("../images/toplogo.png");
     background-position: top right;
     background-color: black;
     background-repeat: no-repeat;
@@ -134,66 +134,6 @@ ul{
         width: 100%;
 }
 
-.button2 {
-	-moz-box-shadow:inset 1px 1px 5px 1px #f29c93;
-	-webkit-box-shadow:inset 1px 1px 5px 1px #f29c93;
-	box-shadow:inset 1px 1px 5px 1px #f29c93;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3cccbe), color-stop(1, #21a6a6) );
-	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3cccbe', endColorstr='#21a6a6');
-	background-color:#fe1a00;
-	-moz-border-radius:27px;
-	-webkit-border-radius:27px;
-	border-radius:27px;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Advent;
-	font-weight:bold;
-	padding:inherit;
-	text-decoration:none;
-	text-shadow:2px 2px 5px #b23e35;
-        width: 100%;
-}
-.button3 {
-	-moz-box-shadow:inset 1px 1px 5px 1px #f29c93;
-	-webkit-box-shadow:inset 1px 1px 5px 1px #f29c93;
-	box-shadow:inset 1px 1px 5px 1px #f29c93;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d59cc), color-stop(1, #2621a6) );
-	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d59cc', endColorstr='#2621a6');
-	background-color:#fe1a00;
-	-moz-border-radius:27px;
-	-webkit-border-radius:27px;
-	border-radius:27px;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Advent;
-	font-weight:bold;
-	padding:inherit;
-	text-decoration:none;
-	text-shadow:2px 2px 5px #b23e35;
-        width: 100%;
-}
-.button4 {
-	-moz-box-shadow:inset 1px 1px 5px 1px #f29c93;
-	-webkit-box-shadow:inset 1px 1px 5px 1px #f29c93;
-	box-shadow:inset 1px 1px 5px 1px #f29c93;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #21a631), color-stop(1, #3dcc80) );
-	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#21a631', endColorstr='#3dcc80');
-	background-color:#fe1a00;
-	-moz-border-radius:27px;
-	-webkit-border-radius:27px;
-	border-radius:27px;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Advent;
-	font-weight:bold;
-	padding:inherit;
-	text-decoration:none;
-	text-shadow:2px 2px 5px #b23e35;
-        width: 100%;
-}
 
 
     
