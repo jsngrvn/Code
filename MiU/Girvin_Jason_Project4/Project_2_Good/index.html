@@ -83,7 +83,7 @@
 		<div data-role="content">
 			
 			<img src="images/coming_soon.jpeg" class=imgpos />
-		
+			
 		</div>
 		
 		<div data-role="footer" data-position="fixed" class=footerstyle>
@@ -93,7 +93,6 @@
 		</div>
 		
 	</div>
-	
 	
 	<!--add score-->
 	<div data-role="page" id="additem">
@@ -106,22 +105,23 @@
 					<ul id="errors"></ul>
 					<!--Testing information section-->
 					<legend><h2>Glucose Information</h2></legend>
+					<h5>* Indicates a required field</h5>
 					</br>
 					<!--section to seperate the date entry-->
 					<div>
 					    <label for="testDate">Date</label>
-					    <input type="date" id="testDate" value="04-01-2011"/></li>
+					    <input type="date" id="testDate" value="mm/dd/yyyy" style="color: grey"/></li>
 					</div>
 					</br>
 					<!--section to seperate the time of test selection box-->
 					<ul>
-					    <li id ="select"><label for="select">Time</label>
+					    <li id ="select"><label for="select">Time *</label>
 					</ul>
 					</br>
 					<!--seperate container for score section slider-->
 					<div>
 					    <label for="tscore">Score</label>
-					    <input type="range" name="tscore" id="tscore" min="0" max="1000" value="0"/>
+					    <input type="range" name="tscore" id="tscore" min="80" max="240" value="80"/>
 					</div>
 				</fieldset>
 				</br>
@@ -129,6 +129,7 @@
 				<fieldset>
 					<!--legend name-->
 					<legend><h2>Insulin Information</h2></legend>
+					<h5>* Indicates a required field</h5>
 					</br>
 					<!-- container to hold the checkbox for insulin types-->
 					<div>
@@ -139,7 +140,7 @@
 					</br>
 					<!-- container to hold the numeric units taken field-->
 					<div>
-					    <label for="insunits">Units</label><input type="number" id="insunits" min="0"/>
+					    <label for="insunits">Units *</label><input type="number" id="insunits" min="0"/>
 					</div>
 					</br>
 					<!-- conatiner to hold the addl info text entry-->
@@ -153,7 +154,7 @@
 			
 			<!-- submit button-->
 			</br>
-			<div class=subbut>
+			<div>
 				<input type="submit" value="Submit Score" id="submit">
 			</div>
 			<!--Links to clear and display form data-->

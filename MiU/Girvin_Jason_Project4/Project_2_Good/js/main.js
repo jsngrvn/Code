@@ -433,13 +433,11 @@ window.addEventListener("DOMContentLoaded", function(){
 	    var selectError = "Please select a Time.";
 	    getSelect.style.border = "1px solid red";
 	    messageAry.push(selectError);
-	    alert("Please complete the Time of Test field!");
 	}
 	if(getInsunits.value === ""){
 	    var insunitsError = "Please enter the number of Units.";
 	    getInsunits.style.border = "1px solid red";
 	    messageAry.push(insunitsError);
-	    alert("Please complete the number of units!")
 
 	}
 	
@@ -450,6 +448,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		errMsg.appendChild(txt);
 	    }
 	    e.preventDefault();
+	    alert("Please complete the required fields");
 	    return false;
 	}else{
 	    //if good save data, send key value (came from editData)
